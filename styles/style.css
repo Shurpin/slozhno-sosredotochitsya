@@ -1,5 +1,223 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color, #000028);
+  font-family: var(--main-fon, sans-serif);
+  color: var(--main-color, #f1b2ce);
+}
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  background-image: var(--bg-img-header);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /*  background-attachment: fixed; */
+}
+
+.decorated-zone {
+  content: "";
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  block-size: 25px;
+  inline-size: 25px;
+  right: 10px;
+  top: 10px;
+  border-top: 1px solid var(--accent-color-decor, #ff0070);
+  border-right: 1px solid var(--accent-color-decor, #ff0070);
+}
+
+.decorated-zone::after {
+  content: "";
+  block-size: 25px;
+  inline-size: 25px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--accent-color-decor, #ff0070);
+  border-left: 1px solid var(--accent-color-decor, #ff0070);
+}
+
+.header__rec-text {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  font-family: var(--main-font, sans-serif);
+  color: var(--accent-color-rec, #ff0070);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  right: 19px;
+  top: 12px;
+}
+
+.header__rec-text::after {
+  content: "";
+  display: flex;
+  margin-inline-start: 9px;
+  margin-block-start: 6px;
+  block-size: 9px;
+  inline-size: 9px;
+  background-color: var(--bg-color-decor, #ff0070);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 4px #ff0070);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  padding-inline: 13px;
+  margin-block-end: 1px;
+  font-family: var(--main-font, sans-serif);
+  color: var(--accent-color-decor, #ff0070);
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color, #FF0070);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color, #353430);
+  outline-offset: 4px;
+}
+
+button:disabled {
+  pointer-events: none;
+  outline: 1px solid var(--accent-color, #353430);
+}
+
+.header__theme-menu-button_type_light {
+}
+
+.header__theme-menu-button_active {
+}
+
+.header__theme-menu-button_type_auto {
+}
+
+.header__theme-menu-button_type_dark {
+}
+
+.header__title {
+  color: var(--header-color, #db00ff);
+  text-shadow: 4px 4px 0 var(--header-color-shadow, #ff0070);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-family: var(--accent-font, sans-serif);
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
+}
+
+.header__block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__block-content {
+  display: block;
+  text-align: left;
+}
+
+.title-decor {
+  background-color: var(--bg-color-main, #ff0070);
+  font-family: var(--main-font, sans-serif);
+  color: var(--title-color, #000028);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+/*  @media (min-width: 768px) and (max-width: 1023px) */
+@media (768px <= width < 1024px) {
+  .header {
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    right: 20px;
+    top: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 20px;
+  }
+  
+  .header__rec-text {
+    top: 22px;
+    right: 30px;
+  }
+  .header__title {
+    margin-inline-start: -21px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__block-content {
+    max-width: 364px;
+  }
+}
+
+/*  @media (min-width: 1024px) */
+@media (width >= 1024px) {
+  .header {
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    right: 20px;
+    top: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 20px;
+  }
+  
+  .header__rec-text {
+    top: 22px;
+    right: 30px;
+  }
+  .header__title {
+    margin-inline-start: -21px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header__block-content {
+    max-width: 491px;
+  }
+
+  .header__theme-menu {
+  justify-content: center;
+  }
+
+  .header__theme-menu-list {
+  flex-direction: row;
+  }
 }
