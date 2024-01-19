@@ -360,6 +360,7 @@ button:disabled {
 
   .content__section-gallery .main__title-third {
     margin-bottom: 0;
+    grid-area: h3;
   }
 
   .gallery {
@@ -378,10 +379,6 @@ button:disabled {
       "ice-tape books ice-cream"
       "ice-tape street street"
       "ice-tape street street";
-  }
-
-  .content__section-gallery .main__title-third {
-    grid-area: h3;
   }
 
   .section__gallery-mountains {
