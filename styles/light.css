@@ -10,34 +10,28 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-font: "IBM Plex mono";
-  /*--------------background-----------------*/
   --bg-color-main: #ff8dcb;
   --bg-color-decor: transparent;
   --bg-img-header: url(../images/cover-image-light.png);
-  /*--------------color-----------------*/
   --header-color: #ffc2e6;
   --title-color: #353430;
   --main-color: #353430;
   --accent-color: #353430;
   --accent-color-rec: #fff1f7;
   --hover-color: rgba(50, 49, 45, 0.4);
-  /*-------------------------------*/
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-font: "IBM Plex mono";
-    /*--------------background-----------------*/
     --bg-color-main: #ff8dcb;
     --bg-color-decor: transparent;
     --bg-img-header: url(../images/cover-image-light.png);
-    /*--------------color-----------------*/
     --header-color: #ffc2e6;
     --title-color: #353430;
     --main-color: #353430;
     --accent-color: #353430;
     --accent-color-rec: #fff1f7;
     --hover-color: rgba(50, 49, 45, 0.4);
-    /*-------------------------------*/
   }
 }
