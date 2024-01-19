@@ -9,40 +9,35 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --accent-font: 'IBM Plex mono';
+  --accent-font: "IBM Plex mono";
   /*--------------background-----------------*/
-  --bg-color-main: #FF8DCB;
+  --bg-color-main: #ff8dcb;
   --bg-color-decor: transparent;
-  --bg-img-header: url(../images/cover-image-light.png); 
+  --bg-img-header: url(../images/cover-image-light.png);
   /*--------------color-----------------*/
-  --header-color: #FFC2E6;
+  --header-color: #ffc2e6;
   --title-color: #353430;
-  --header-color-shadow: #FF8DCB;
   --main-color: #353430;
   --accent-color: #353430;
-  --accent-color-decor: #353430;
-  --accent-color-rec: #FFF1F7;
-  --hover-color: rgba(50, 49, 45, 0.40);
-   /*-------------------------------*/
+  --accent-color-rec: #fff1f7;
+  --hover-color: rgba(50, 49, 45, 0.4);
+  /*-------------------------------*/
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-font: 'IBM Plex mono';
+    --accent-font: "IBM Plex mono";
     /*--------------background-----------------*/
-    --bg-color-main: #FF8DCB;
+    --bg-color-main: #ff8dcb;
     --bg-color-decor: transparent;
-    --bg-img-header: url(../images/cover-image-light.png); 
+    --bg-img-header: url(../images/cover-image-light.png);
     /*--------------color-----------------*/
-    --header-color: #FFC2E6;
+    --header-color: #ffc2e6;
     --title-color: #353430;
-    --header-color-shadow: #FF8DCB;
     --main-color: #353430;
     --accent-color: #353430;
-    --accent-color-decor: #353430;
-    --accent-color-rec: #FFF1F7;
-    --hover-color: rgba(50, 49, 45, 0.40);
-     /*-------------------------------*/
-    }
+    --accent-color-rec: #fff1f7;
+    --hover-color: rgba(50, 49, 45, 0.4);
+    /*-------------------------------*/
+  }
 }

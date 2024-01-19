@@ -31,8 +31,8 @@
   inline-size: 25px;
   right: 10px;
   top: 10px;
-  border-top: 1px solid var(--accent-color-decor, #ff0070);
-  border-right: 1px solid var(--accent-color-decor, #ff0070);
+  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
 }
 
 .decorated-zone::after {
@@ -42,11 +42,11 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color-decor, #ff0070);
-  border-left: 1px solid var(--accent-color-decor, #ff0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--accent-color, #ff0070);
 }
 
-.header__rec-text {
+.rec-text {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -58,7 +58,7 @@
   top: 12px;
 }
 
-.header__rec-text::after {
+.rec-text::after {
   content: "";
   display: flex;
   margin-inline-start: 9px;
@@ -67,7 +67,7 @@
   inline-size: 9px;
   background-color: var(--bg-color-decor, #ff0070);
   border-radius: 50%;
-  filter: drop-shadow(0 0 4px #ff0070);
+  box-shadow: 0 0 8px var(--bg-color-decor, #ff0070);
 }
 
 .header__theme-menu {
@@ -88,7 +88,7 @@
   padding-inline: 13px;
   margin-block-end: 1px;
   font-family: var(--main-font, sans-serif);
-  color: var(--accent-color-decor, #ff0070);
+  color: var(--accent-color, #ff0070);
   font-weight: 400;
   text-transform: lowercase;
 }
@@ -113,7 +113,7 @@ button:disabled {
 
 .header__title {
   color: var(--header-color, #db00ff);
-  text-shadow: 4px 4px 0 var(--header-color-shadow, #ff0070);
+  text-shadow: 4px 4px 0 var(--bg-color-main, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-family: var(--accent-font, sans-serif);
   font-weight: 700;
@@ -183,7 +183,7 @@ button:disabled {
 
 .link__text {
   text-decoration: none;
-  text-shadow: 2px 2px var(--header-color-shadow, #ff0070);
+  text-shadow: 2px 2px var(--bg-color-main, #ff0070);
 }
 
 
@@ -228,7 +228,7 @@ button:disabled {
   margin-block-end: 10px;
 }
 
-/*--------------------content__mountains---------------*/
+/*--------------------content__gallery---------------*/
 .content__section-gallery {
   display: grid;
   grid-template-rows: repeat(6, min-content);
@@ -243,25 +243,28 @@ button:disabled {
   inline-size: 100%;
 }
 
-.section__gallery-mountains {
-  
+.content .content__section-gallery {
+  padding-block-end: 0;
+}
+/*-------------------------footer--------------------*/
+.footer {
+  position: relative;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.section__gallery-ice-cream {
-
+.footer__title {
+  color: var(--header-color, #db00ff);
+  text-shadow: 2px 2px 0px var(--bg-color-main, #ff0070);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-family: var(--accent-font, sans-serif);
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
 }
 
-.section__gallery-ice-tape {
-
-}
-
-.section__gallery-books {
-
-}
-
-.section__gallery-street {
-
-}
 
 /*  -------------------------768------------------------ */
 @media (768px <= width < 1024px) {
@@ -279,7 +282,7 @@ button:disabled {
     bottom: 20px;
   }
 
-  .header__rec-text {
+  .rec-text {
     top: 22px;
     right: 30px;
   }
@@ -351,6 +354,10 @@ button:disabled {
     grid-row-end: 6;
   }
 
+  .content__section-gallery .main__title-third {
+    margin-bottom: 0;
+  }
+
   .gallery {
     block-size: 100%;
   }
@@ -358,6 +365,7 @@ button:disabled {
   .content__section-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
     gap: 20px;
     align-items: start;
     grid-template-areas:
@@ -394,48 +402,9 @@ button:disabled {
       grid-area: street;
      }
 
-/*
-  .content__section-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content 0.8fr 1.2fr fit-content(318px);
-    gap: 20px;
-    align-items: start;
-    grid-template-areas:
-    "h3 h3 h3"
-    "mountains mountains ice-cream"
-    "ice-tape books ice-cream"
-    "ice-tape street street"
-    "ice-tape street street"
+     .footer {
+      padding: 20px;
     }
-
-    .content__section-gallery .main__title-third {
-      grid-area: h3;
-    }
-
-    .section__gallery-mountains {
-      grid-area: mountains;
-     }
-
-    .section__gallery-ice-cream {
-      object-fit: cover;
-      grid-area: ice-cream;
-     }
-
-    .section__gallery-ice-tape { 
-      grid-area: ice-tape;
-      object-fit: cover;
-     }
-
-    .section__gallery-books { 
-      grid-area: books;
-     }
-
-    .section__gallery-street { 
-      grid-area: street;
-     }
-*/
-
 }
 
 
@@ -456,14 +425,16 @@ button:disabled {
     bottom: 20px;
   }
 
-  .header__rec-text {
+  .rec-text {
     top: 22px;
     right: 30px;
   }
+
   .header__title {
     margin-inline-start: -21px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
   .header__block-content {
     max-width: 491px;
   }
@@ -537,6 +508,58 @@ button:disabled {
     grid-row-start: 1;
     grid-row-end: 6;
   }
+
+  .gallery {
+    block-size: 100%;
+  }
+
+  .content__section-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 20px;
+    align-items: start;
+    grid-template-areas:
+    "h3 h3 h3"
+    "mountains mountains ice-cream"
+    "ice-tape books ice-cream"
+    "ice-tape street street"
+    "ice-tape street street"
+    }
+
+    .content__section-gallery .main__title-third {
+      grid-area: h3;
+    }
+
+    .section__gallery-mountains {
+      grid-area: mountains;
+     }
+
+    .section__gallery-ice-cream {
+      object-fit: cover;
+      grid-area: ice-cream;
+     }
+
+    .section__gallery-ice-tape { 
+      grid-area: ice-tape;
+      object-fit: cover;
+     }
+
+    .section__gallery-books { 
+      grid-area: books;
+     }
+
+    .section__gallery-street { 
+      grid-area: street;
+     }
+
+     .footer {
+      padding: 20px;
+    }
+
+    .footer__title {
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
 }
 
 
