@@ -31,8 +31,8 @@
   inline-size: 25px;
   right: 10px;
   top: 10px;
-  border-top: 1px solid var(--accent-color, #ff0070);
-  border-right: 1px solid var(--accent-color, #ff0070);
+  border-top: 1px solid var(--accent-color-decor, #ff0070);
+  border-right: 1px solid var(--accent-color-decor, #ff0070);
 }
 
 .decorated-zone::after {
@@ -42,8 +42,8 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color, #ff0070);
-  border-left: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--accent-color-decor, #ff0070);
+  border-left: 1px solid var(--accent-color-decor, #ff0070);
 }
 
 .rec-text {
@@ -88,7 +88,7 @@
   padding-inline: 13px;
   margin-block-end: 1px;
   font-family: var(--main-font, sans-serif);
-  color: var(--accent-color, #ff0070);
+  color: var(--accent-color-decor, #ff0070);
   font-weight: 400;
   text-transform: lowercase;
 }
@@ -113,7 +113,7 @@ button:disabled {
 
 .header__title {
   color: var(--header-color, #db00ff);
-  text-shadow: 4px 4px 0 var(--bg-color-main, #ff0070);
+  text-shadow: 4px 4px 0 var(--header-color-shadow, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-family: var(--accent-font, sans-serif);
   font-weight: 700;
@@ -183,7 +183,7 @@ button:disabled {
 
 .link__text {
   text-decoration: none;
-  text-shadow: 2px 2px var(--bg-color-main, #ff0070);
+  text-shadow: 2px 2px var(--header-color-shadow, #ff0070);
 }
 
 
@@ -258,7 +258,7 @@ button:disabled {
 
 .footer__title {
   color: var(--header-color, #db00ff);
-  text-shadow: 2px 2px 0px var(--bg-color-main, #ff0070);
+  text-shadow: 2px 2px 0px var(--header-color-shadow, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-family: var(--accent-font, sans-serif);
   font-weight: 700;
@@ -560,6 +560,7 @@ button:disabled {
     .footer__title {
       font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
+  
 }
 
 
