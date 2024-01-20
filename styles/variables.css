@@ -3,14 +3,15 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-font: "IBM Plex mono";
-  --accent-font: "IBM Plex mono";
+  --main-font: 'IBM Plex mono';
   --bg-color-main: #ff0070;
   --bg-color-decor: #ff0070;
   --bg-img-header: url(../images/cover-image-dark.png);
   --header-color: #db00ff;
+  --color-shadow: #FF0070;
   --title-color: #000028;
   --main-color: #f1b2ce;
   --accent-color: #ff0070;
+  --accent-color-rec: #FF0070;
   --hover-color: rgba(255, 0, 112, 0.4);
 }

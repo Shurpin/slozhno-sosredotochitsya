@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: var(--main-fon, sans-serif);
+  font-family: var(--main-font, monospace);
   color: var(--main-color, #f1b2ce);
   font-size: 18px;
   background-image: var(--bg-img-header);
@@ -51,7 +51,7 @@
   position: absolute;
   display: flex;
   flex-direction: row;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   color: var(--accent-color-rec, #ff0070);
   text-transform: uppercase;
   font-weight: 400;
@@ -88,10 +88,12 @@
   border: none;
   padding-inline: 13px;
   margin-block-end: 1px;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   color: var(--accent-color, #ff0070);
   font-weight: 400;
   text-transform: lowercase;
+  cursor: pointer;
+  transition-duration: 0.5s;
 }
 
 .header__theme-menu-button:focus {
@@ -114,9 +116,9 @@ button:disabled {
 
 .header__title {
   color: var(--header-color, #db00ff);
-  text-shadow: 4px 4px 0 var(--header-color, #ff0070);
+  text-shadow: 4px 4px 0 var(--color-shadow, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   line-height: 82.5%; /* 129.525px */
 }
@@ -138,7 +140,7 @@ button:disabled {
 
 .title-decor {
   background-color: var(--bg-color-main, #ff0070);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   color: var(--title-color, #000028);
   font-weight: 700;
   line-height: 23.4px;
@@ -163,7 +165,7 @@ button:disabled {
 
 .main__title-second {
   color: var(--accent-color, #ff0070);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -179,7 +181,7 @@ button:disabled {
 }
 
 .content__section-text {
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -188,7 +190,8 @@ button:disabled {
 
 .link__text {
   text-decoration: none;
-  text-shadow: 2px 2px var(--header-color, #ff0070);
+  text-shadow: 2px 2px var(--color-shadow, #ff0070);
+  transition-duration: 0.5s;
 }
 
 .link__text:focus {
@@ -263,9 +266,9 @@ button:disabled {
 
 .footer__title {
   color: var(--header-color, #db00ff);
-  text-shadow: 2px 2px 0px var(--header-color, #ff0070);
+  text-shadow: 2px 2px 0px var(--color-shadow, #ff0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   line-height: 82.5%; /* 129.525px */
 }
@@ -515,12 +518,13 @@ button:disabled {
 
   .content__section-gallery {
     display: grid;
+    max-width: 984px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto);
     gap: 20px;
     align-items: start;
     grid-template-areas:
-      "h3 h3 h3"
+      "h2 h2 h2"
       "mountains mountains ice-cream"
       "ice-tape books ice-cream"
       "ice-tape street street"
@@ -528,7 +532,7 @@ button:disabled {
   }
 
   .content__section-gallery .main__title-third {
-    grid-area: h3;
+    grid-area: h2;
   }
 
   .section__gallery-mountains {
@@ -555,6 +559,7 @@ button:disabled {
 
   .footer {
     padding: 20px;
+    max-width: 1024px;
   }
 
   .footer__title {
