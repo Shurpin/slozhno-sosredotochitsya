@@ -10,6 +10,7 @@
   background-size: cover;
   background-attachment: fixed;
   transition-duration: 0.5s;
+  max-inline-size: 1024px;
 }
 
 .header {
